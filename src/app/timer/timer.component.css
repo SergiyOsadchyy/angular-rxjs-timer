@@ -1,0 +1,11 @@
+button {
+  padding: 2em;
+  border-radius: 2em;
+  background: #FFFFFF;
+  margin: 2em;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  border: 1px solid #FFFFFF;
+}
+:host {
+  font-size: 8em;
+}

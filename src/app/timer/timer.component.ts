@@ -34,7 +34,10 @@ export class TimerComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     const start$ = fromEvent(this.startBtn.nativeElement, 'click').pipe(mapTo(true));
     const pause$ = fromEvent(this.pauseBtn.nativeElement, 'click').pipe(mapTo(false));
+
     const wait$ = fromEvent(this.waitBtn.nativeElement, 'click').pipe(mapTo(false));
+    // TODO: develop logic for waitBtn
+
     const reset$ = fromEvent(this.resetBtn.nativeElement, 'click').pipe(mapTo(null));
     this.intervalObs$ = merge(start$, pause$, reset$).pipe(
       switchMap(isCounting => {
